@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <message-form />
+    <StarWars />
   </div>
 </template>
 
 <script>
-import MessageForm from './components/MessageForm'
+import StarWars from './components/StarWars'
 
 export default {
   name: 'app',
   components: {
-    MessageForm
+    StarWars
   }
 }
 </script>
