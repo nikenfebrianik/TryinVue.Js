@@ -4,7 +4,7 @@
     <button @click="addMessage">Add</button>
     <br />
     <ul>
-      <li v-for="(message, id) in listMessage" v-bind:key="id" v-if="message != 'reza'">{{message}}</li>
+      <li v-for="(message, id) in listMessage" v-bind:key="id">{{message}}</li>
     </ul>
     <label>{{msg}}</label>
   </div>
@@ -20,7 +20,9 @@
       },
       methods: {
         addMessage(){
-          this.listMessage.push(this.msg);
+          if(this.msg !== "reza"){
+            this.listMessage.push(this.msg);
+          }
           this.msg = "";
         }
       }
