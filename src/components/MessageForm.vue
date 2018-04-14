@@ -1,10 +1,10 @@
 <template>
   <div class="form">
     <input v-model="msg" />
-    <button v-on:click="addMessage">Add</button>
+    <button @click="addMessage">Add</button>
     <br />
     <ul>
-      <li v-for="(message, id) in listMessage" :key="id">{{message}}</li>
+      <li v-for="(message, id) in listMessage" v-bind:key="id" v-if="message != 'reza'">{{message}}</li>
     </ul>
     <label>{{msg}}</label>
   </div>
